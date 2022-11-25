@@ -1,0 +1,74 @@
+[
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
+        "category_id": "01",
+        "original_price": 488,
+        "resell_price": 565,
+        "years_used": 5,
+        "location": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
+        "sellers_name": "Jimmy Dane",
+        "posted_date": "2022-08-24 17:27:34",
+        "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png"
+    },
+    {
+        "_id": "11468ed61aee84de492a8b04158a22f9",
+        "category_id": "03",
+        "original_price": 980,
+        "resell_price": 565,
+        "years_used": 5,
+        "location": "Joe Biden announces $3 billion in Ukraine weapons aid",
+        "sellers_name": "system",
+        "posted_date": "2022-08-24 23:15:00",
+        "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "image_url": "https://i.ibb.co/T0PnZxD/unsplash-Eh-Tc-C9s-YXsw-8.png"
+    },
+    {
+        "_id": "11468ed61aee84de492a8b04158a22f0",
+        "category_id": "01",
+        "original_price": 980,
+        "resell_price": 565,
+        "years_used": 5,
+        "location": "Joe Biden announces $3 billion in Ukraine weapons aid",
+        "sellers_name": "system",
+        "posted_date": "2022-08-24 23:15:00",
+        "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "image_url": "https://i.ibb.co/T0PnZxD/unsplash-Eh-Tc-C9s-YXsw-8.png"
+    },
+    {
+        "_id": "2e78e5e0310c2e9adbb6efb1a263e745",
+        "category_id": "02",
+        "original_price": null,
+        "resell_price": 565,
+        "years_used": 5,
+        "location": "Tucker Carlson: Putin Winning in Ukraine, Biden Hurting West",
+        "sellers_name": null,
+        "posted_date": "2022-08-30 15:00:04",
+        "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "image_url": "https://i.ibb.co/BZZ5WKv/unsplash-Eh-Tc-C9s-YXsw-4.png"
+    },
+    {
+        "_id": "a713ee936ff5574273f0f769f5c5b20e",
+        "category_id": "03",
+        "original_price": 111,
+        "resell_price": 565,
+        "years_used": 5,
+        "location": "America Imported Over $6 Billion in Goods From Russia Since Ukraine Invasion",
+        "sellers_name": "system",
+        "posted_date": null,
+        "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "image_url": "https://i.ibb.co/xh57pkr/unsplash-Eh-Tc-C9s-YXsw-1.png"
+    },
+    {
+        "_id": "f06f8cc035b04bd1158e4198281915a3",
+        "category_id": "02",
+        "original_price": 127,
+        "resell_price": 565,
+        "years_used": 5,
+        "location": "9 Things to do in Colorado this Labor Day weekend",
+        "sellers_name": "Ukrainska Pravda",
+        "posted_date": "2022-08-25 18:53:49",
+        "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "image_url": "https://i.ibb.co/H4p2t3V/unsplash-Eh-Tc-C9s-YXsw-6.png"
+    }
+]
