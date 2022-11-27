@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Catagory = ({ catagory }) => {
-    const { name, img } = catagory;
+    const { name, img, catagory_id } = catagory;
     return (
         <div>
             <div className="card bg-base-200 shadow-xl">
@@ -10,7 +11,7 @@ const Catagory = ({ catagory }) => {
                 </figure>
                 <div className="card-body items-center text-center">
 
-                    <button className="btn btn-ghost card-title">{name}</button>
+                    <Link to={`/products/${catagory_id}`}> <button className="btn btn-ghost card-title">{name}</button></Link>
 
                 </div>
             </div>
