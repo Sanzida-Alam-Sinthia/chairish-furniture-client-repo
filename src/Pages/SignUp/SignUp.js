@@ -3,17 +3,18 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext)
     const [signUpError, setSignUPError] = useState('')
     const [createdUserEmail, setCreatedUserEmail] = useState('')
-    // const [token] = useToken(createdUserEmail);
+    const [token] = useToken(createdUserEmail);
     const navigate = useNavigate();
-    // if (token) {
-    //     navigate('/');
-    // }
+    if (token) {
+        navigate('/');
+    }
     const handleSignUp = (data) => {
         console.log(data);
         setSignUPError('');
@@ -23,11 +24,12 @@ const SignUp = () => {
                 console.log(user);
                 toast('User Created Successfully.')
                 const userInfo = {
-                    displayName: data.name
+                    displayName: data.name,
+                    userRole: data.role
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(data.name, data.email)
+                        saveUser(data.name, data.email, data.role)
                     })
                     .catch(err => console.log(err));
             })
@@ -37,8 +39,8 @@ const SignUp = () => {
             });
 
     }
-    const saveUser = (name, email) => {
-        const user = { name, email };
+    const saveUser = (name, email, role) => {
+        const user = { name, email, role };
         fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
@@ -98,7 +100,7 @@ const SignUp = () => {
                                         <label className="label"> <span className="label-text">Choose Role</span></label>
 
                                         <select name="role" type="text" {...register("role")} className="select select-bordered w-full">
-                                            <option defaultChecked>User</option>
+                                            <option defaultChecked>Buyer</option>
                                             <option>Seller</option>
 
                                         </select>
@@ -107,7 +109,7 @@ const SignUp = () => {
 
                                     <input className='btn btn-accent w-full' value="Sign Up" type="submit" />
                                     <div>
-                                        {/* {loginError && <p className='text-red-600'>{loginError}</p>} */}
+                                        {signUpError && <p className='text-red-600'>{signUpError}</p>}
                                     </div>
 
                                 </form>

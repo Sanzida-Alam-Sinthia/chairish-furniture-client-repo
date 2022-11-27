@@ -1,6 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
+import DashboardLayout from '../layout/DashboardLayout';
 import Main from '../layout/Main';
 import Blogs from '../Pages/Blogs/Blogs';
+import AllUsers from '../Pages/DashBoard/AllUsers';
 import CatagorizedProducts from '../Pages/Home/Catagories/CatagorizedProducts';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/login/Login';
@@ -38,10 +40,36 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/products?category_id=${params.category_id}`)
 
             }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+            {
+                path: '/dashboard/allusers',
+                element: <AllUsers></AllUsers>
+            }
 
-
+            // {
+            //     path: '/dashboard',
+            //     element: <MyAppointment></MyAppointment>
+            // },
+            // {
+            //     path: '/dashboard/allusers',
+            //     element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            // },
+            // {
+            //     path: '/dashboard/adddoctor',
+            //     element: <AdminRoute><AddDoctor></AddDoctor></AdminRoute>
+            // },
+            // {
+            //     path: '/dashboard/managedoctors',
+            //     element: <AdminRoute><ManageDoctors></ManageDoctors></AdminRoute>
+            // },
         ]
     }
+
 ])
 
 export default router;

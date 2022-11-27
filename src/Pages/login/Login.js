@@ -73,7 +73,7 @@ const Login = () => {
                                     <label className="label"> <span className="label-text">Choose Role</span></label>
 
                                     <select name="role" type="text" {...register("role")} className="select select-bordered w-full">
-                                        <option defaultChecked>User</option>
+                                        <option defaultChecked>Buyers</option>
                                         <option>Seller</option>
 
                                     </select>

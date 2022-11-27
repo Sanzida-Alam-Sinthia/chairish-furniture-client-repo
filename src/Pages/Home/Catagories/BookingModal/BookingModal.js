@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 
 const BookingModal = ({ products, setProducts }) => {
@@ -8,19 +9,39 @@ const BookingModal = ({ products, setProducts }) => {
     const handleBooking = event => {
         event.preventDefault();
         const form = event.target;
-        const slot = form.slot.value;
         const name = form.name.value;
         const email = form.email.value;
         const phone = form.phone.value;
-        // [3, 4, 5].map((value, i) => console.log(value))
-        // const booking = {
-        //     appointmentDate: date,
-        //     treatment: treatmentName,
-        //     patient: name,
-        //     slot,
-        //     email,
-        //     phone,
-        // }
+        const location = form.location.value;
+
+        const booking = {
+
+            products: ProductName,
+            resell_price,
+            buyer: name,
+            email,
+            phone,
+            location
+        }
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    setProducts(null);
+                    toast('Your Product is Booked Successfully')
+
+                }
+                else {
+                    toast.error(data.message);
+                }
+            })
     }
     return (
         <>
@@ -32,16 +53,7 @@ const BookingModal = ({ products, setProducts }) => {
                     <p className="text-lg font-bold">Price: ${resell_price}</p>
 
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
-                        {/* <input type="text" disabled value={date} className="input w-full input-bordered " />
-                        <select name="slot" className="select select-bordered w-full">
-                            {
-                                slots.map((slot, i) => <option
-                                    value={slot}
-                                    key={i}
-                                >{slot}</option>)
-                            }
-                        </select> */}
-                        {/* <input name="price" type="text" defaultValue={ resell_price} disabled placeholder="Product Price" className="input w-full input-bordered" /> */}
+
 
                         <input name="name" type="text" defaultValue={user?.displayName} disabled placeholder="Your Name" className="input w-full input-bordered" />
                         <input name="email" type="email" defaultValue={user?.email} disabled placeholder="Email Address" className="input w-full input-bordered" />
