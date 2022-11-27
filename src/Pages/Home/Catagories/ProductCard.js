@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, setProducts }) => {
 
     const { name, img } = { product };
-    console.log({ product })
+    // console.log({ product })
     return (
         <div className="card w-96 bg-base-200 shadow-xl">
             <figure><img className='w-full' src={product.img} alt="Shoes" /></figure>
@@ -20,7 +20,12 @@ const ProductCard = ({ product }) => {
                 </div>
 
                 <div className="card-actions justify-center">
-                    <button className="btn btn-primary">Book Now</button>
+                    <label
+
+                        htmlFor="booking-modal"
+                        className="btn btn-primary text-white"
+                        onClick={() => setProducts(product)}
+                    >Book Appointment</label>
                 </div>
             </div>
         </div>
