@@ -4,20 +4,21 @@ import { useForm } from 'react-hook-form';
 
 // import useToken from '../hooks/useToken';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { signIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     const [loginUserEmail, setLoginUserEmail] = useState('');
-    // const [token] = useToken(loginUserEmail);
+    const [token] = useToken(loginUserEmail);
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || '/';
-    // if (token) {
-    //     navigate(from, { replace: true });
-    // }
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
     const handleLogin = data => {
         console.log(data);
@@ -73,8 +74,8 @@ const Login = () => {
                                     <label className="label"> <span className="label-text">Choose Role</span></label>
 
                                     <select name="role" type="text" {...register("role")} className="select select-bordered w-full">
-                                        <option defaultChecked>Buyers</option>
-                                        <option>Seller</option>
+                                        <option defaultChecked>buyers</option>
+                                        <option>seller</option>
 
                                     </select>
                                 </div>
