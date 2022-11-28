@@ -44,8 +44,7 @@ const MyProducts = ({ sellerProduct }) => {
                                 {/* <td>{user.displayName}</td> */}
                                 <td>{product.name}</td>
                                 <td>{product.resell_price}</td>
-                                {/* <td>{product.appointmentDate}</td>
-                                <td>{product.slot}</td> */}
+
                             </tr>)
                         }
                     </tbody>
